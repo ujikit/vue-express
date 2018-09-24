@@ -1,21 +1,34 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Register from '@/components/Register'
+import VueRouter from 'vue-router'
+// Component
+import IndexComponent from '@/components/Index'
+import LoginComponent from '@/components/Login'
+import SecureComponent from '@/components/Secure'
 
-Vue.use(Router)
+export var router = new VueRouter()
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'index',
+      component: IndexComponent
     },
     {
-      path: '/register',
-      name: 'register',
-      component: Register
+      path: '/login',
+      name: 'login',
+      component: LoginComponent
+    },
+    {
+      path: '/secure',
+      name: 'secure',
+      component: SecureComponent
+    },
+    // Not found route
+    {
+      path: '*',
+      component: IndexComponent
     }
   ]
 })

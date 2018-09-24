@@ -3,7 +3,7 @@ module.exports = {
   db: {
     host: process.env.HOST || 'localhost',
     database: process.env.DB_NAME || 'vue_express',
-    user: process.env.DB_USER || 'admin',
+    user: process.env.DB_USER || 'root',
     password: process.env.DB_PASS || ''
   }
 }
